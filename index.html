@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+	 <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Увеличение баланса</title>
+</head>
+<body>
+<div class="container">
+        <header class="header">
+            <h1 class="title">AlexTap</h1>
+            <nav class="nav">
+                <ul class="nav-menu">
+                </ul>
+            </nav>
+        </header>
+    <div class="container">
+        <div class="section account-info">
+		    <h1 class="title"><span id="balance">0</span></h1>
+            <img src="laex.jpg" alt="Кликабельное изображение" id="clickable-image" 
+			style="cursor: pointer; width: 200px; height: auto; border-radius: 10px; border: 5px solid #8b5bb7;">
+        </div>
+		
+        <div class="footer">
+            <p>© 2024 Purple Project</p>
+        </div>
+    </div>
+
+    <script>
+        let balance = 0;
+        const balanceDisplay = document.getElementById('balance');
+        const clickableImage = document.getElementById('clickable-image');
+
+        clickableImage.addEventListener('click', function() {
+            balance++;
+            balanceDisplay.textContent = balance;
+        });
+    </script>
+</body>
+</html>
